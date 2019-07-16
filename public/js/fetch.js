@@ -30,7 +30,7 @@ const summary =document.querySelector('#summary')
 
 
 //fixed location
-fetch('http://localhost:8000/weather?address=New%20Delhi').then((response)=>{
+fetch('/weather?address=New%20Delhi').then((response)=>{
   response.json().then((data)=>{
 
 
@@ -88,7 +88,7 @@ weatherForm.addEventListener('submit',(e)=>{
     
     const locations= search.value
     message.textContent="loading....."
-    const url='http://localhost:8000/weather?address='+locations
+    const url='/weather?address='+locations
 
     fetch(url).then((response)=>{
         response.json().then((data)=>{

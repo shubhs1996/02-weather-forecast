@@ -10,7 +10,7 @@ const partialpath=path.join(__dirname,'../templates/partials')
 
 
 const app =express()
-
+const port =process.env.PORT||3000
 
 app.set('view engine','hbs')
 app.set('views',viewpath)
@@ -67,7 +67,7 @@ app.get('/weather',(req,res)=>{
 })
 
 
-app.listen(8000,()=>{ 
-    console.log('listening on port 8000')
+app.listen(port,()=>{ 
+    console.log('listening on port '+port)
 })
 
