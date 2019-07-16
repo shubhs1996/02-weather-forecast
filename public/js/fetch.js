@@ -1,6 +1,3 @@
-
-
-
 const degree1max=document.querySelector('#degree-1-max')
 const degree1min=document.querySelector('#degree-1-min')
 const degree2max=document.querySelector('#degree-2-max')
