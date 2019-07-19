@@ -40,16 +40,16 @@ app.get('/weather',(req,res)=>{
         })
     }
   const address=req.query.address
-   geocode(address,(err,{lat,long,location})=>{
+   geocode(address,(err,{lat,long,location}={})=>{
       if(err){
-        return res.send({err})
+        return res.send({error:err})
       }
         
        
        
        forecast(lat,long,(err,foredata)=>{
         if(err){
-            return res.send({err})
+            return res.send({error:err})
         }
 
         res.send({

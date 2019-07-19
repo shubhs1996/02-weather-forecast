@@ -10,7 +10,9 @@ request({url,json:true},(err,data)=>{
         call('unable to coonect',undefined)
     }else if(data.body.errorr)
     {
-        call('provide valid address',undefined)
+        call('Unable to find location.Provide valid address',undefined)
+    }else if(!data.body.features[0]){
+        call('Unable to find location.Provide valid address',undefined)
     }
     else{
         call(undefined,{
